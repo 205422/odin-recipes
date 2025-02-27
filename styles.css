@@ -1,14 +1,14 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
 #main {
     font-size: 100px;
-    font-family: 'Times New Roman', Times, serif;
 }
 h1 {
     font-size: 60px;
-    font-family: 'Times New Roman', Times, serif;
 }
 .text, li {
     font-size: 22px;
-    font-family: 'Times New Roman', Times, serif;
 }
 .home_list {
     font-size: 34px;
