@@ -1,9 +1,10 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
 }
 #main {
     font-size: 100px;
     font-weight: bold;
+    font-family: 'Old English Five', sans-serif;
     margin: auto;
     margin-top: 137px;
     border-radius: 5px;
@@ -12,26 +13,20 @@
 }
 .card, .pages {
     width: 612px;
-    background-color: white;
     margin: 16px auto;
     padding: 8px;
-    border-style: solid;
-    border-color: white;
     border-radius: 5px;
     left: 50%;
 }
-.title, .card_title, .card_title, .text, .editor_text, .para, h3, .head {
-    background: white;
+.title, .card_title, .text, .editor_text, .para, h3, .head {
     margin-bottom: 8px;
     padding: 8px;
 }
 .list, .card2_content {
-    background-color: white;
     margin-bottom: 8px;
     padding: 16px 8px 1px;
 }
 .title_list_content {
-    background-color: white;
     margin: 8px 0px 8px;
     padding: 1x 8px 1px;
     font-size: 24px;
@@ -46,26 +41,95 @@
     margin-right: 34px;
     text-align: center;
 }
-a {
-    margin: 8px;
+.test {
+    position: relative;
+    background: #fff;
+    color: rgb(82, 82, 82);
+    text-decoration: none;
+    font-size: 34px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    padding: 10px 30px;
+    transition: 0.5s;
+    color: rgb(82, 82, 82);
 }
-.background_image_main {background-image: url(images/sauna.jpg);
+.test:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+.test::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+
+}
+.test span {
+    position: relative;
+    z-index: 1;
+}
+.test i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+.test i::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: #27282c;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+.test:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+.test i::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: #27282c;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+.test:hover i::after {
+    width: 20px;
+    left: 80%;
+}
+.background_image_main {background-image: url(images/gray_sky1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.background_image_cheesecake {background-image: url(images/luxury-white-kitchen.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
 .recipe_buttons {
-    position: absolute;
-    left: 43%;
-    display: block;
-    text-align: center; 
-    width: 166px;
-    height: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 50vh;
+   flex-direction: column;
+   gap: 20px;
+
+
 }
 .para {
     color: rgb(82, 82, 82);
-    font-family: Helvetica,'Arial Narrow',Sans-serif;
     font-size: 17px;
     font-weight: bold;
 }
@@ -83,5 +147,9 @@ a {
 .pages, #main {
     text-align: center;
 }
-
+.page {
+    font-size: 14px;
+    color: rgb(82, 82, 82);
+    margin: 8px;
+    font-weight: bold;
 }
