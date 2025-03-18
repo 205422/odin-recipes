@@ -11,7 +11,7 @@
     width: 800px;
     padding: 8px;
 }
-.card, .pages {
+.card {
     width: 612px;
     margin: 16px auto;
     padding: 8px;
@@ -41,7 +41,7 @@
     margin-right: 34px;
     text-align: center;
 }
-.test {
+.button {
     position: relative;
     background: #fff;
     color: rgb(82, 82, 82);
@@ -53,30 +53,30 @@
     transition: 0.5s;
     color: rgb(82, 82, 82);
 }
-.test:hover {
+.button:hover {
     background: var(--clr);
     color: var(--clr);
     letter-spacing: 0.25em;
     background: var(--clr);
     box-shadow: 0 0 35px var(--clr);
 }
-.test::before {
+.button::before {
     content: '';
     position: absolute;
     inset: 2px;
     background: #27282c;
 
 }
-.test span {
+.button span {
     position: relative;
     z-index: 1;
 }
-.test i {
+.button i {
     position: absolute;
     inset: 0;
     display: block;
 }
-.test i::before {
+.button i::before {
     content: '';
     position: absolute;
     top: 0;
@@ -87,11 +87,11 @@
     transform: translateX(-50%) skewX(325deg);
     transition: 0.5s;
 }
-.test:hover i::before {
+.button:hover i::before {
     width: 20px;
     left: 20%;
 }
-.test i::after {
+.button i::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -102,7 +102,7 @@
     transform: translateX(-50%) skewX(325deg);
     transition: 0.5s;
 }
-.test:hover i::after {
+.button:hover i::after {
     width: 20px;
     left: 80%;
 }
@@ -144,12 +144,44 @@
     font-size: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.pages, #main {
+#main {
     text-align: center;
 }
-.page {
-    font-size: 14px;
-    color: rgb(82, 82, 82);
-    margin: 8px;
-    font-weight: bold;
-}
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    
+    list-style: none;
+    margin: 0; 
+    background: deepskyblue;
+  }
+  .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+  }
+  .navigation a:hover {
+    background: #1565C0;
+  }
+  @media all and (max-width: 800px) {
+    .navigation {
+      justify-content: space-around;
+    }
+  }
+  @media all and (max-width: 600px) {
+    .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    .navigation a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255,0.3); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    .navigation li:last-of-type a {
+      border-bottom: none;
+    }
+  }
